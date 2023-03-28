@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>test-bdd-alterra</td>
+                          <td>1</td>
+                        <td>09 Jan 2023, 03:04</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">Hooks.closeBrowser()</td>
+                <td>1</td>
+                <td class="duration" data-value="1434224900">1s 434ms</td>
+                <td class="duration" data-value="1434224900">1s 434ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.openBrowser()</td>
+                <td>1</td>
+                <td class="duration" data-value="5810847700">5s 810ms</td>
+                <td class="duration" data-value="5810847700">5s 810ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LoginSteps.inputCredential(String,String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5261534900">5s 261ms</td>
+                <td class="duration" data-value="5261534900">5s 261ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">LoginSteps.verifyDisplay()</td>
+                <td>1</td>
+                <td class="duration" data-value="131611300">131ms</td>
+                <td class="duration" data-value="131611300">131ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.checkoutProduct()</td>
+                <td>1</td>
+                <td class="duration" data-value="2043519500">2s 043ms</td>
+                <td class="duration" data-value="2043519500">2s 043ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.clickCart()</td>
+                <td>1</td>
+                <td class="duration" data-value="2055523300">2s 055ms</td>
+                <td class="duration" data-value="2055523300">2s 055ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.clickItemBasket1()</td>
+                <td>1</td>
+                <td class="duration" data-value="2044939600">2s 044ms</td>
+                <td class="duration" data-value="2044939600">2s 044ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.clickItemBasket2()</td>
+                <td>1</td>
+                <td class="duration" data-value="2039390500">2s 039ms</td>
+                <td class="duration" data-value="2039390500">2s 039ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.continueButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="2061169100">2s 061ms</td>
+                <td class="duration" data-value="2061169100">2s 061ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.finishPaymentButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="2052714500">2s 052ms</td>
+                <td class="duration" data-value="2052714500">2s 052ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.inputCredential(String,String,String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5160496400">5s 160ms</td>
+                <td class="duration" data-value="5160496400">5s 160ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.removeItem()</td>
+                <td>1</td>
+                <td class="duration" data-value="5053825700">5s 053ms</td>
+                <td class="duration" data-value="5053825700">5s 053ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.selectProductContainer()</td>
+                <td>1</td>
+                <td class="duration" data-value="2095343300">2s 095ms</td>
+                <td class="duration" data-value="2095343300">2s 095ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.thankYouOrderText(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="5030915800">5s 030ms</td>
+                <td class="duration" data-value="5030915800">5s 030ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.verifyItem1()</td>
+                <td>1</td>
+                <td class="duration" data-value="28724000">028ms</td>
+                <td class="duration" data-value="28724000">028ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.verifyItem2()</td>
+                <td>1</td>
+                <td class="duration" data-value="23137700">023ms</td>
+                <td class="duration" data-value="23137700">023ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.verifyItemTax()</td>
+                <td>1</td>
+                <td class="duration" data-value="36115700">036ms</td>
+                <td class="duration" data-value="36115700">036ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.verifyItemTotal()</td>
+                <td>1</td>
+                <td class="duration" data-value="21292600">021ms</td>
+                <td class="duration" data-value="21292600">021ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">PurchaseSteps.verifyTotalPayment()</td>
+                <td>1</td>
+                <td class="duration" data-value="17439400">017ms</td>
+                <td class="duration" data-value="17439400">017ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>19</td>
+              <td>19</td>
+              <td class="duration">42s 402ms</td>
+              <td class="duration">2s 231ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
